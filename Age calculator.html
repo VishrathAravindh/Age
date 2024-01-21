@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body><h1>Age calculator</h1>
+<div class="contains"><div class="incontain"><h2>Enter your birth date</h2>
+  <input type="date" id="birth"><button onclick="age()">Check</button></div></div>
+  <style>
+    .contains{
+      background:white;height:220px;width:220px;margin:100px;margin-left:50px;border-radius:20%;border:2px solid black;
+    }
+    body{
+      background:#A9A9A9;
+    }
+    .incontain{
+      text-align:center;
+    }
+    h1{
+      color:black;
+    }
+    button{ background:lightgreen;margin:12px;}
+  </style>
+  <script>
+    
+   function age(){
+      var entereddate=document.getElementById("birth").value;
+    
+    var presentyear=new Date().getFullYear()
+    var birthyear=new Date(entereddate).getFullYear()
+     var age=presentyear-birthyear;
+      
+      window.alert("your age is:"+age);
+      if(age<=12){
+         window.alert("you are a kid")
+      }
+      if(age<20 && age>13){
+         window.alert("you are a teen")
+      }
+      if(age>19 && age<60 ){
+        alert("you are an adult;You can vote")
+      
+      }
+      if(age>=60){
+        alert("you are a senior citizen;you can vote")
+      }
+      if(age>=18){
+        alert("you can vote")
+      }
+    }
+  </script>
+</body>
+
+</html>
